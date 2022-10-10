@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;    
+            align-items: center;
+            width: 1000px;
+            height: 500px;
+            background-color: brown;
+        }
+
+        button {
+            padding: 15px;
+            background-color: yellowgreen;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        button:hover{
+            padding: 15px;
+            background-color: burlywood;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="arkaplandegistir()">Değiştir</button>
+    </div>
+
+
+    <script>
+        
+         renkler=["red","blue","yellow","orange","purple","aqua","white","aquamarine","green","darkblue","darkred"]
+        function arkaplandegistir(){
+            var container=document.getElementsByClassName("container")[0];
+            container.style.background=renkler[Math.floor(Math.random()*11)];
+        }
+        
+    </script>
+</body>
+
+</html>

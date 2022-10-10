@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesajını İlet</title>
+    <style>
+        body{
+            margin: 25px 25px 25px 25px;
+            width: 93rem;
+            height: 43rem;
+            background-color: #10B6CA;
+            color: black;
+        }
+        div{
+            text-align: center;
+            position: relative;
+            top: 11rem;
+            left: 25rem;
+            width: 50rem;
+            height: 25rem;
+            border: 25px solid rgb(24, 12, 12);
+            border-radius: 30px 100px;
+            
+        }
+        .h1{
+            color: #08611e;
+            font-size: 3rem;
+
+        }
+        #input{
+            width:25rem ;
+            height: 3rem;
+            background: rgb(97, 52, 1);
+            border-radius: 500px;
+            text-shadow: 0px 0px 5px gray;
+            color: black;
+         ;
+        }   
+        .button1{
+            background:brown;
+            width: 6rem;
+            height: 3rem;
+            border-radius: 500px;
+            text-shadow: 0px 0px 5px gray;
+            cursor: pointer;
+          
+        }
+        .button1:hover{
+            
+            background:rgb(42, 165, 42);
+            width: 8rem;
+            height: 3rem;
+            border-radius: 500px;
+            text-shadow: 0px 0px 5px rgb(83, 13, 79);
+            cursor: pointer;
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 class="h1">Mesajını İlet</h1>
+        <input id="input" type="text" placeholder="Lütfen iletmek istediğiniz mesajı yazınız.">
+        <button onclick="tikla()" class="button1">Gönder</button>
+    </div>
+
+    <script>
+        function tikla(){
+            var container=document.getElementById("container");
+            var input=document.getElementById("input");
+            var yeniParagraf=document.createElement("p");
+            var yeniBaslık=document.createElement("h2");
+           
+            container.appendChild(yeniParagraf)
+            container.appendChild(yeniBaslık)
+           if(input.value){
+            yeniBaslık.innerHTML="Mesajınız iletildi" +"📩";
+            yeniParagraf.innerHTML=input.value.toUpperCase() 
+            yeniParagraf.style.color="red";
+            yeniParagraf.style.fontWeight="bold"
+            yeniParagraf.style.fontSize="2rem"
+            yeniParagraf.style.fontFamily="Arial"
+            yeniParagraf.style.textAlign="center"
+            yeniBaslık.style.color="darkblue"
+           }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlışverişListesi</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background-color: black;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url("https://media.istockphoto.com/vectors/online-shop-seamless-background-vector-id669941744");
+        }
+
+        .menu {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top: 50px;
+            text-align: center;
+            color: red;
+
+        }
+
+        #input {
+            width: 350px;
+            height: 35px;
+            font-size: 20px;
+            color: red;
+            border-radius: 20px;
+            border: 3px solid black;
+        }
+
+        button {
+            width: 100px;
+            height: 35px;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            margin: 5px 5px 5px 5px;
+            
+        }
+        #button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 108px;
+            left: 480px;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <h1>Alışveriş Sepetim</h1>
+
+        <div>
+            <input  type="text" name="" id="input" placeholder="Lütfen almak istediklerinizi ekleyin.">
+            <button onclick="ekle()" type="submit">Ekle</button>
+           
+        </div>
+        <div id="eklemek">
+
+        </div>
+
+    </div>
+
+    
+    <script>
+        var counter = 0;
+        function ekle() {
+            
+            counter++;
+            var eklemek = document.getElementById("eklemek");
+            var input = document.getElementById("input");
+            var paragraf = document.createElement("p");
+            eklemek.appendChild(paragraf)
+            paragraf.innerHTML = counter + "-) " + input.value.toUpperCase()
+            paragraf.style.fontWeight = "bold"
+            paragraf.style.fontSize = "25px"
+            paragraf.innerHTML+="🛒🛍"
+            var button = document.createElement("button");
+            button.innerHTML = "Alındı"
+            button.innerHTML += "🎈"
+            eklemek.appendChild(button);
+            button.addEventListener("click", silme);
+            button.style.background = "orange"
+            button.style.width = "150px"
+            button.style.height = "30px"
+            button.style.textShadow="1px 1px 5px red"
+            button.style.borderRadius="25px"
+            input.value = ""
+          
+           
+            function silme() {
+                eklemek.removeChild(paragraf)
+                eklemek.removeChild(button)
+                counter--;
+            }
+            
+            
+           }
+            
+
+        
+
+    </script>
+</body>
+
+</html>

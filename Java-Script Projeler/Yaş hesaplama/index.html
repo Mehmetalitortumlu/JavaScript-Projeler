@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaşınız Kaç?</title>
+    <style>
+        *{
+            font-size: 30px;
+            color: aqua;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-top: 50px;
+            border: 5px solid black;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+
+    <script>
+        var isim= prompt("Lütfen isminizi yaziniz.")
+        var dogumTarihi=prompt("Lütfen doğum tarihinizi yazınız.")
+
+        function yasbilen(){
+            if(isim.length && dogumTarihi.length) {
+                document.write("Merhaba  "+ isim +"<br>"+ (2022-dogumTarihi) +" Yaşındasınız")
+            }
+               else{
+                document.write("Hatalı giriş yaptınız isminizi veya doğum yılınızı kontrol ediniz.")
+               }
+           }
+          yasbilen(isim+dogumTarihi)
+
+
+          
+    </script>
+</body>
+</html>
+
+
