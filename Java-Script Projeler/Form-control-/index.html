@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        input {
+            display: block;
+            margin-top: 15px;
+        }
+
+        #btn {
+            position: absolute;
+            transition: .5s;
+            /* background-color: dodgerblue;
+            padding: 10px;
+            height: 40px;
+            width: 150px; */
+        }
+
+        input {
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center mt-5">Form Kontrol</h1>
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="row ">
+            <div class="col-12 ">
+
+                <form class="">
+                    <input class="form-control" required type="text" placeholder="Lütfen Kullanıcı adınızı giriniz">
+                    <input class="form-control" required type="email" placeholder="Lütfen E-posta adresinizi giriniz">
+                    <input class="form-control" id="ps1" required type="password"
+                        placeholder="Lütfen şifrenizi giriniz">
+                    <input class="form-control" id="ps2" required type="password"
+                        placeholder="Lütfen şifrenizi giriniz">
+                    <div class="mt-5">
+                        <a  href="#">Bilgilendirme metni</a>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center mt-5">
+                        <b>Okudum onaylıyorum</b>
+                        <input id="onayla" type="checkbox">
+
+                    </div>
+                    <br>
+                    <div class="ml-5 d-flex justify-content-end ">
+                        <button type="submit" id="btn" class="btn btn-primary btn-lg ml-5" disabled>Kayıt</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // var btn=document.getElementById("btn");
+
+        var onayla = document.getElementById("onayla");
+        onayla.addEventListener("click", button)
+
+        function button() {
+            var btn = document.getElementById("btn");
+            btn.toggleAttribute("disabled")
+            // btn.classList.remove("disabled")
+            // btn.classList.add("active")     
+
+
+            var ps1 = document.getElementById("ps1");
+            var ps2 = document.getElementById("ps2");
+            if (ps1.value != ps2.value) {
+                alert("şifreler eşleşmedi")
+            }
+
+
+
+        }
+
+
+            var btn = document.getElementById("btn");
+            ;
+            btn.addEventListener('mouseover', function () {
+                btn.style.left = `${Math.ceil(Math.random() * 90)}%`;
+                btn.style.top = `${Math.ceil(Math.random() * 90)}%`;
+            });
+            btn.addEventListener('click', function () {
+                alert('you clicked me')
+            })
+
+
+
+    </script>
+</body>
+
+</html>
